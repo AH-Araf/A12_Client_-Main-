@@ -12,13 +12,13 @@ const ReviewRow = ({x, handleDelete}) => {
     const {data: users = [], refetch} = useQuery({
         queryKey: ['users'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/allmobile');
+            const res = await fetch('https://b-assignment12-server.vercel.app/allmobile');
             const data = await res.json();
             return data;
         } 
     });
     const handleAdvertisement = id => {
-        fetch(`http://localhost:5000/allmobile/admin/${id}`, {
+        fetch(`https://b-assignment12-server.vercel.app/allmobile/admin/${id}`, {
             method: 'PUT', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -37,7 +37,7 @@ const ReviewRow = ({x, handleDelete}) => {
     const [review, setreview] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allmobile`)
+        fetch(`https://b-assignment12-server.vercel.app/allmobile`)
             .then(res => res.json())
             .then(data => setreview(data))
     }, [])

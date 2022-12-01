@@ -17,7 +17,7 @@ const AllDevice = ({x}) => {
     const { user } = useContext(AuthContext);
     const [review, setreview] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/emaila?name=${user?.email}`)
+        fetch(`https://b-assignment12-server.vercel.app/emaila?name=${user?.email}`)
             .then(res => res.json())
             .then(data => setreview(data))
     }, [user?.email])
@@ -43,7 +43,7 @@ const AllDevice = ({x}) => {
             rPrice
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://b-assignment12-server.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

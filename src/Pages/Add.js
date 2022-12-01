@@ -8,7 +8,7 @@ const Add = () => {
     const [review, setreview] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allmobile`)
+        fetch(`https://b-assignment12-server.vercel.app/allmobile`)
             .then(res => res.json())
             .then(data => setreview(data))
     }, [])

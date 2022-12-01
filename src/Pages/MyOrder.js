@@ -8,7 +8,7 @@ const MyOrder = () => {
     const { user } = useContext(AuthContext);
     const [review, setreview] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/AllMobileEmaila?email=${user?.email}`)
+        fetch(`https://b-assignment12-server.vercel.app/AllMobileEmaila?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setreview(data))
     }, [user?.email])

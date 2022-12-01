@@ -28,7 +28,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/category'),
+                loader: () => fetch('https://b-assignment12-server.vercel.app/category'),
             },
             {
                 path:'/blog',
@@ -45,17 +45,17 @@ export const routes = createBrowserRouter([
             {
                 path:'/addservices',
                 element: <PrivateRoute><AddServices></AddServices></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/category'),
+                loader: () => fetch('https://b-assignment12-server.vercel.app/category'),
             },
             {
                 path: '/allmobile/:id',
                 element: <PrivateRoute><Single></Single></PrivateRoute>,
-                loader: async ({params}) =>  fetch(`http://localhost:5000/allmobile/${params.id}`)
+                loader: async ({params}) =>  fetch(`https://b-assignment12-server.vercel.app/allmobile/${params.id}`)
             },   
             {
                 path: '/allUsers',
                 element: <PrivateRoute><AllUsers></AllUsers></PrivateRoute>,
-                loader: async ({params}) =>  fetch(`http://localhost:5000/users`)
+                loader: async ({params}) =>  fetch(`https://b-assignment12-server.vercel.app/users`)
             }, 
             {
                 path: '/myOrder',
@@ -65,7 +65,7 @@ export const routes = createBrowserRouter([
            {
                 path:'/target',
                 element:<Target></Target>,
-                loader: () => fetch('http://localhost:5000/users'),
+                loader: () => fetch('https://b-assignment12-server.vercel.app/users'),
 
            },
            {
@@ -76,7 +76,7 @@ export const routes = createBrowserRouter([
         {
             path: '/myProducts',
             element: <MyProducts></MyProducts>,
-            loader: () => fetch('http://localhost:5000/allmobile'),
+            loader: () => fetch('https://b-assignment12-server.vercel.app/allmobile'),
             
         }
         ]

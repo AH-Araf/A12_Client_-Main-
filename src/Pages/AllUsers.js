@@ -7,13 +7,13 @@ const AllUsers = () => {
     const {data: users = [], refetch} = useQuery({
         queryKey: ['users'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/users');
+            const res = await fetch('https://b-assignment12-server.vercel.app/users');
             const data = await res.json();
             return data;
         } 
     });
     const handleMakeVerify = id => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://b-assignment12-server.vercel.app/users/admin/${id}`, {
             method: 'PUT', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -33,7 +33,7 @@ const AllUsers = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            fetch(`http://localhost:5000/users/${id}`, {
+            fetch(`https://b-assignment12-server.vercel.app/users/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

@@ -25,7 +25,7 @@ console.log(user)
 
     // const [quiz, setQuiz] = useState([]);
     // useEffect( ()=>{
-    //     axios.get('http://localhost:5000/users')
+    //     axios.get('https://b-assignment12-server.vercel.app/users')
     //     .then(data => {
     //         const dataLoaded = data.data; 
     //          console.log(dataLoaded);
@@ -43,7 +43,7 @@ console.log(user)
 
     const [review, setreview] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/emaila?name=${user?.email}`)
+        fetch(`https://b-assignment12-server.vercel.app/emaila?name=${user?.email}`)
             .then(res => res.json())
             .then(data => setreview(data))
     }, [user?.email])

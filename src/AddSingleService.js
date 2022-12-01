@@ -57,7 +57,7 @@ const AddSingleService = ({service}) => {
             date
         }
 
-        fetch('http://localhost:5000/allmobile', {
+        fetch('https://b-assignment12-server.vercel.app/allmobile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

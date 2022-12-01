@@ -8,7 +8,7 @@ const MyProducts = () => {
     const [review, setreview] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/AllMobileEmail?email=${user?.email}`)
+        fetch(`https://b-assignment12-server.vercel.app/AllMobileEmail?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setreview(data))
     }, [user?.email])
@@ -17,7 +17,7 @@ const MyProducts = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            fetch(`http://localhost:5000/AllMobileEmail/${id}`, {
+            fetch(`https://b-assignment12-server.vercel.app/AllMobileEmail/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())
