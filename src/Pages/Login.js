@@ -25,6 +25,7 @@ const Login = () => {
     }
 
 
+    
     //Sign in with email and password
     const [error, setError] = useState('');
     const { signIn, setLoading } = useContext(AuthContext);
