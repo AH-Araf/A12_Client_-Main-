@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 
+
 const ReviewRow = ({x, handleDelete}) => {
     const { _id, category, userName, email, deviceModel, PhotoURL, uses,oPrice, date} = x;
     // console.log(x)
