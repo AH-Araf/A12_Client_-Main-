@@ -2,6 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
+        
         <div className='conatiner-blog'>
             <div className='bottom'>
                 <h4><span className='que'>Question:</span> What are the different ways to manage a state in a React application</h4>
