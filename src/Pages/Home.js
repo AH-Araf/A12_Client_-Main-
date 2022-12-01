@@ -13,7 +13,7 @@ const Home = () => {
             <ImageSlider></ImageSlider>
             <div className='display-flex m-3'>
                 {
-                    
+
                     services.map(service => <HomeCategory
                     key={service._id}
                     service={service}
@@ -29,6 +29,7 @@ const Home = () => {
             </div>
 
         </div>
+        
     );
 };
 
