@@ -32,7 +32,6 @@ const MyProducts = () => {
         }
     }
 
-
     return (
         
 
