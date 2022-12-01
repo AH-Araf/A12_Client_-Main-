@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const HomeCategory = ({service}) => {
     // console.log(service);
     const {img, name, _id } = service;
