@@ -29,6 +29,7 @@ const ImageSlider = () => {
                     src={c}
                     alt="Second slide"
                 />
+                
                 </Carousel.Item>
             </Carousel>
             </div>
