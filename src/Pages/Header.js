@@ -36,6 +36,7 @@ console.log(user)
     //             }
     //             return singleData;
     //         })
+    
     //          console.log(quizData)
     //         setQuiz(quizData);
     //     })
