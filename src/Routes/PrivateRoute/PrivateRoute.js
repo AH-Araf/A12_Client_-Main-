@@ -13,6 +13,7 @@ const PrivateRoute = ({children}) => {
             <Spinner animation="border" variant="danger" />
         </div>
     }
+    
 
     if(!user){
         return <Navigate to="/login" state={{from: location}} replace></Navigate>
